@@ -19,7 +19,7 @@ function MenuElemaniOlustur(arg1, arg2, arg3){
 	let obj = {isim: arg1, fiyat: arg2, kategori: arg3};
 	return obj;
 }
-console.log(MenuElemaniOlustur('Cheeseburger', 8, 'Burgerler'))
+
 
 
 /*  Görev 1b (otomatik test yok): 
@@ -32,7 +32,13 @@ console.log(MenuElemaniOlustur('Cheeseburger', 8, 'Burgerler'))
 	Örnek: MenuElemaniOlustur("Karışık Pizza",5,"Pizzalar") şunu döndürür: {isim:"Karışık Pizza",fiyat:5,kategori:"Pizzalar"}
 */
 
-
+MenuElemaniOlustur('Cheeseburger', 8, 'Burgerler');
+const menu1 = MenuElemaniOlustur('Iskender', 78, 'Donerler');
+const menu2 = MenuElemaniOlustur('Cilekli', 18, 'Dondurmalar');
+const menu3 = MenuElemaniOlustur('Yayla', 28, 'Corbalar');
+console.log(menu1);
+console.log(menu2);
+console.log(menu3);
 
 /* Görev 2: 
 	Özel bir öğle yemeği yiyorsun! Öğretmen ve öğrencilere %25, diğer kişilere %10 indirim var. Aşağıdaki burger nesnesine, indirimi fiyatı otomatik olarak hesaplayan bir metot ekleyin.
@@ -51,7 +57,10 @@ const burger = {
 	isim: "Burger", 
 	fiyat: 18, 
 	kategori: "Öğle Yemeği", 
-
+	indirim: function (str) {
+		if (str === "öğretmen" || str === "öğrenci") {return this.fiyat * 0.75}
+		else {return this.fiyat * 0.90}
+	}
 }
 
 
