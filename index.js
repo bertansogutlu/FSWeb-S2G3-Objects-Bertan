@@ -172,8 +172,8 @@ function SonDegerlendirmeyiAl(arr) {
 	]
 */
 
-function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+function PuanaGoreDegerlendirmeAl(arr, point) {
+    return arr.filter(obj => (obj.puan >= 4 && obj.puan < 5));
 }
 
 
@@ -184,10 +184,13 @@ function PuanaGoreDegerlendirmeAl(/* Kodlar buraya */) {
 	
 */
 
-function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
-    /* Kodlar buraya */
+function UzunDegerlendirmeleriAl(arr) {
+    return arr.filter(obj => (obj.geribildirim.split(" ") > 15));
 }
 
+function UzunDegerlendirmeleriAl(arr) {
+    return arr.filter(obj => (obj.geribildirim.split(" ").length > 15));
+}
 
 /*  BONUS 3:  
 	Bu ek görevde degerlendirmeler dizisi kullanılmayacak!  Bu görevde kendi nesnenizi yaratmanız gerekmektedir.
@@ -205,6 +208,7 @@ function UzunDegerlendirmeleriAl(/* Kodlar buraya */) {
 	Şu şekilde metotu çağıralım araba1.surus(100)
 	Bu 110 döndürmelidir çünkü başlangıç kilometre sayacını 10 olarak tanımladık ve 100 km arabayı sürdük.
 */
+
 
 
 function arabaYapici(/* Kodlar buraya */) {
