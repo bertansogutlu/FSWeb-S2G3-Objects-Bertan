@@ -184,9 +184,7 @@ function PuanaGoreDegerlendirmeAl(arr, point) {
 	
 */
 
-function UzunDegerlendirmeleriAl(arr) {
-    return arr.filter(obj => (obj.geribildirim.split(" ") > 15));
-}
+
 
 function UzunDegerlendirmeleriAl(arr) {
     return arr.filter(obj => (obj.geribildirim.split(" ").length > 15));
@@ -211,10 +209,15 @@ function UzunDegerlendirmeleriAl(arr) {
 
 
 
-function arabaYapici(/* Kodlar buraya */) {
-    /* Kodlar buraya */
-    
+function arabaYapici() {
+	this.km = 10,
+	this.surus = function (fark) {
+		return this.km += fark;
+}    
 }
+
+const araba1 = new arabaYapici();
+console.log(araba1.surus(100))
 
 
 /*  Buradan aşağıdaki kodları değiştirmeyin lütfen */
