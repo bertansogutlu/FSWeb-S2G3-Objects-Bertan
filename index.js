@@ -82,7 +82,7 @@ const degerlendirmeler = [
 	1. Sadece Ahmet'in geribildirimini konsolda görüntüleyin - fonksiyona gerek yok
 */
 
-console.log(degerlendirmeler.filter(obj => obj.isim === "Ahmet")[0]["geribildirim"]);
+console.log(degerlendirmeler.find(obj => obj.isim === "Ahmet")["geribildirim"]);
 
 /*  Görev 4 (ototest yok):  
 	Reyna'nın geribildirimi girilmemiş! Aşağıdakileri uygulayın: (fonksiyona gerek yok) 
@@ -90,9 +90,9 @@ console.log(degerlendirmeler.filter(obj => obj.isim === "Ahmet")[0]["geribildiri
 	2. degerlendirmeler dizisini konsolda görüntüleyerek çalışmanızı kontrol edin
 */
 
-degerlendirmeler.filter(obj => obj.isim === "Reyna").forEach(obj => obj.geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım");
+degerlendirmeler.find(obj => obj.isim === "Reyna").geribildirim = "bu mekan bir harika dostum, yine de garsonun gülümsememesinden puan kırdım"
 
-console.log(degerlendirmeler.filter(obj => obj.isim === "Reyna")[0]["geribildirim"]);
+console.log(degerlendirmeler.find(obj => obj.isim === "Reyna").geribildirim);
 
 /*  Görev 5: 
 	isim, puan, geribildirim'i içeren bir değerlendirme nesnesi oluşturup, yeni değerlendirmeyi mevcut dizinin(array) sonuna ekleyip sonuç dizisini döndüren bir fonksiyon tanımlayın. 
@@ -125,7 +125,10 @@ function DegerledirmeEkle(arr, name, score, comment){
 */
 
 
-function AnahtardanDegerlendirmeAl(/*Kodlar buraya*/) {
+function AnahtardanDegerlendirmeAl(arr, key) {
+	
+	`{key} isimli kişi 5 puan verdi ve şunları yazdı: Mükemmel atmosfer ve mükemmel vegan seçenekleri!`
+
 	/*Kodlar buraya*/
 
 }
