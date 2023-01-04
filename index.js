@@ -125,12 +125,11 @@ function DegerledirmeEkle(arr, name, score, comment){
 */
 
 
-function AnahtardanDegerlendirmeAl(arr, key) {
-	
-	`{key} isimli kişi 5 puan verdi ve şunları yazdı: Mükemmel atmosfer ve mükemmel vegan seçenekleri!`
-
-	/*Kodlar buraya*/
-
+function AnahtardanDegerlendirmeAl(arr, index) {
+	const name = arr[index].isim;
+	const score = arr[index].puan;
+	const comment = arr[index].geribildirim;
+	return `${name} isimli kişi ${score} puan verdi ve şunları yazdı: ${comment}`;
 }
 
 
@@ -148,8 +147,11 @@ function AnahtardanDegerlendirmeAl(arr, key) {
 */
 
 
-function SonDegerlendirmeyiAl(/*Kodlar buraya*/) {
-	/*Kodlar buraya*/
+function SonDegerlendirmeyiAl(arr) {
+	const name = arr[arr.length-1].isim;
+	const score = arr[arr.length-1].puan;
+	const comment = arr[arr.length-1].geribildirim;
+	return `${name} isimli kişi ${score} puan verdi ve şunları yazdı: ${comment}`;
 } 
 
 
