@@ -173,7 +173,7 @@ function SonDegerlendirmeyiAl(arr) {
 */
 
 function PuanaGoreDegerlendirmeAl(arr, point) {
-    return arr.filter(obj => (obj.puan >= 4 && obj.puan < 5));
+    return arr.filter(obj => (Math.floor(obj.puan) == point));
 }
 
 
